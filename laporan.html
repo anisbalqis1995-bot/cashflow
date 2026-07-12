@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VCMS - Laporan Kewangan Bulanan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Memanggil komponen sidebar automatik -->
+    <div id="sidebar-placeholder" class="sidebar-container"></div>
+
+    <!-- Kandungan Utama Laporan Kewangan -->
+    <div class="main-content">
+        <h1>📈 5. Laporan Kewangan Bulanan</h1>
+        <p style="color: #666; margin-bottom: 20px;">Rumusan kasar prestasi kewangan keseluruhan institusi bagi bulan Julai 2026.</p>
+
+        <!-- Bahagian Analisis / Statistik Ringkas -->
+        <div style="background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 25px;">
+            <h3 style="color: #0b5345; margin-bottom: 15px;">Ringkasan Prestasi (Julai 2026)</h3>
+            
+            <div style="margin-bottom: 12px;">
+                <span style="font-weight: 600;">Jumlah Pendapatan (Kutipan + Sumbangan):</span>
+                <span style="float: right; color: #117a65; font-weight: bold;">+ RM 14,050.00</span>
+            </div>
+            <div style="margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 12px;">
+                <span style="font-weight: 600;">Jumlah Perbelanjaan (Operasi + Kebajikan):</span>
+                <span style="float: right; color: #cb4335; font-weight: bold;">- RM 1,600.00</span>
+            </div>
+            <div style="font-size: 18px; font-weight: bold; margin-top: 15px;">
+                <span>Baki Bersih Bulan Ini:</span>
+                <span style="float: right; color: #0b5345;">RM 12,450.00</span>
+            </div>
+        </div>
+
+        <h3>Status Aliran Kewangan</h3>
+        <p style="font-size: 14px; margin-top: 10px; color: #27ae60; font-weight: bold;">🟩 ALIRAN TUNAI SIHAT</p>
+        <p style="font-size: 14px; color: #555; margin-top: 5px;">Kutipan mengekalkan momentum yang konsisten manakala perbelanjaan utiliti dan penyelenggaraan berkala masih di bawah paras bajet asal yang diperuntukkan.</p>
+    </div>
+
+    <!-- Skrip Panggil Sidebar -->
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
