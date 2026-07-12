@@ -1,0 +1,21 @@
+/* Simpan fail ini dengan nama style.css */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+body { display: flex; background-color: #f4f6f9; min-height: 100vh; }
+
+/* Gaya Sidebar */
+.sidebar-container { width: 280px; background-color: #0b5345; color: white; min-height: 100vh; padding: 20px 0; }
+.sidebar-brand { padding: 0 20px 20px 20px; border-bottom: 1px solid #117a65; text-align: center; }
+.sidebar-menu { list-style: none; margin-top: 20px; }
+.sidebar-menu li a { display: block; padding: 15px 20px; color: #ecf0f1; text-decoration: none; transition: 0.2s; }
+.sidebar-menu li a:hover { background-color: #117a65; padding-left: 30px; }
+
+/* Gaya Kandungan Utama */
+.main-content { flex: 1; padding: 40px; }
+.dashboard-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+.card { background: white; padding: 25px; border-radius: 10px; border-left: 5px solid #0b5345; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-decoration: none; color: inherit; display: block; transition: 0.2s; }
+.card:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
+.card h3 { font-size: 14px; color: #666; text-transform: uppercase; }
+.card .value { font-size: 24px; font-weight: bold; color: #0b5345; margin-top: 10px; }
+table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; }
+table th, table td { padding: 12px; text-align: left; border-bottom: 1px solid #e5e8e8; }
+table th { background-color: #0b5345; color: white; }
