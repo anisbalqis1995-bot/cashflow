@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <title>VCMS - Dashboard Utama</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Kotak kosong untuk diletakkan sidebar nanti -->
+    <div id="sidebar-placeholder" class="sidebar-container"></div>
+
+    <!-- Kandungan Utama Halaman Depan -->
+    <div class="main-content">
+        <h1>Selamat Datang ke Sistem VCMS</h1>
+        <p>Ringkasan sistem pengurusan kewangan semasa:</p>
+        
+        <div class="dashboard-grid">
+            <a href="anggaran.html" class="card">
+                <h3>1. Anggaran Belanjawan</h3>
+                <div class="value">RM 45,000.00</div>
+            </a>
+            <a href="bukutunai.html" class="card">
+                <h3>2. Buku Tunai</h3>
+                <div class="value">RM 12,450.20</div>
+            </a>
+            <a href="tabung.html" class="card">
+                <h3>3. Kutipan Tabung</h3>
+                <div class="value">RM 3,210.00</div>
+            </a>
+            <!-- Tambah kotak 4, 5, 6 mengikut kesesuaian -->
+        </div>
+    </div>
+
+    <!-- SKRIP KEAJAIBAN: Memanggil sidebar.html masuk ke dalam fail ini -->
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
