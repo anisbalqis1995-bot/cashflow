@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <title>VCMS - Anggaran Belanjawan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Tetap panggil placeholder yang sama -->
+    <div id="sidebar-placeholder" class="sidebar-container"></div>
+
+    <div class="main-content">
+        <h1>📊 1. Anggaran Belanjawan Tahunan</h1>
+        <p>Di sini anda boleh letak borang atau jadual khusus untuk anggaran sahaja.</p>
+        
+        <table>
+            <tr><th>Kategori</th><th>Peruntukan</th></tr>
+            <tr><td>Kebajikan</td><td>RM 20,000</td></tr>
+            <tr><td>Penyelenggaraan</td><td>RM 10,000</td></tr>
+        </table>
+    </div>
+
+    <!-- Skrip panggil sidebar wajib ada di setiap fail -->
+    <script>
+        fetch('sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
