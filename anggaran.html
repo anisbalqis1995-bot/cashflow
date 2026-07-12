@@ -2,31 +2,67 @@
 <html lang="ms">
 <head>
     <meta charset="UTF-8">
-    <title>VCMS - Anggaran Belanjawan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cashflow E-Surau - Anggaran</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Tetap panggil placeholder yang sama -->
     <div id="sidebar-placeholder" class="sidebar-container"></div>
 
     <div class="main-content">
-        <h1>📊 1. Anggaran Belanjawan Tahunan</h1>
-        <p>Di sini anda boleh letak borang atau jadual khusus untuk anggaran sahaja.</p>
-        
+        <div class="content-header">
+            <h1>📉 Kawalan Anggaran Belanjawan</h1>
+        </div>
+
+        <div class="search-card" style="text-align: left;">
+            <div class="search-title" style="margin-bottom: 10px; color: #059669;">RM 28,000.00 (Amanah Anggaran Semasa)</div>
+            <p style="font-size: 13px; color: #64748b;">Senarai had maksimum pengeluaran yang telah diluluskan oleh jawatankuasa bagi setiap biro/aktiviti.</p>
+        </div>
+
         <table>
-            <tr><th>Kategori</th><th>Peruntukan</th></tr>
-            <tr><td>Kebajikan</td><td>RM 20,000</td></tr>
-            <tr><td>Penyelenggaraan</td><td>RM 10,000</td></tr>
+            <thead>
+                <tr>
+                    <th>Kod Modul</th>
+                    <th>Nama Aktiviti / Biro</th>
+                    <th>Peruntukan Diluluskan</th>
+                    <th>Telah Digunakan</th>
+                    <th>Baki Anggaran</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>B01</strong></td>
+                    <td>Biro Kebajikan & Bantuan Khas</td>
+                    <td>RM 12,000.00</td>
+                    <td>RM 1,200.00</td>
+                    <td style="color: #059669; font-weight: bold;">RM 10,800.00</td>
+                </tr>
+                <tr>
+                    <td><strong>B02</strong></td>
+                    <td>Biro Pendidikan & Kuliah Ramadhan</td>
+                    <td>RM 8,000.00</td>
+                    <td>RM 400.00</td>
+                    <td style="color: #059669; font-weight: bold;">RM 7,600.00</td>
+                </tr>
+                <tr>
+                    <td><strong>B03</strong></td>
+                    <td>Penyelenggaraan & Utiliti Bangunan</td>
+                    <td>RM 8,000.00</td>
+                    <td>RM 0.00</td>
+                    <td style="color: #059669; font-weight: bold;">RM 8,000.00</td>
+                </tr>
+            </tbody>
         </table>
     </div>
 
-    <!-- Skrip panggil sidebar wajib ada di setiap fail -->
     <script>
         fetch('sidebar.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('sidebar-placeholder').innerHTML = data;
+                var scripts = document.getElementById('sidebar-placeholder').getElementsByTagName('script');
+                for (var i = 0; i < scripts.length; i++) { eval(scripts[i].innerText); }
             });
     </script>
 </body>
